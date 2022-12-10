@@ -1,0 +1,19 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* utility components */
+:root{
+    font-size: 62.5%;
+    /* colors */
+    --clr-neutral-100:#36454f;
+    --clr-neutral-200:#282C35;
+    --clr-light:#ffff;
+    --clr-primary:#Fae000 ;
+    --ff-primary: 'Be Vietnam Pro', sans-serif;
+
+}
+body{
+    font-family: var(--ff-primary);
+}

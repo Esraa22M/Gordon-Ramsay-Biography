@@ -1,0 +1,56 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* utility components */
+:root{
+    font-size: 62.5%;
+    /* colors */
+    --clr-neutral-100:#36454f;
+    --clr-neutral-200:#282C35;
+    --clr-light:#ffff;
+    --clr-primary:#Fae000 ;
+    --ff-primary: 'Baloo Tamma 2', cursive;
+;
+
+}
+body{
+    font-family: var(--ff-primary);
+    line-height: 1.8;
+    display: flex;
+}
+/* -------------------Main Styling-------*/
+
+/* ---side nav-- */
+aside#aside-nav{
+    position: sticky;
+    top:0;
+    left:0;
+    height: 100vh;
+}
+.aside--nav__content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--clr-neutral-200);
+    border-right:0.4rem solid var(--clr-primary);
+    align-items: center;
+}
+.aside--nav__content__logo{
+    width: calc(3vw + 3vh);
+    object-fit: cover;
+}
+.aside-nav__content__nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+
+}
+.aside--nav__content__nav--social{
+    background-color: #Fae000;
+}

@@ -1,0 +1,17 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* colors */
+    --clr-neutral-100:#36454f;
+    --clr-neutral-200:#282C35;
+    --clr-light:#ffff;
+    --clr-primary:#32CCBC;
+}
+nav ,aside{
+    border: 1px solid blue;
+    background-color: red;
+}
