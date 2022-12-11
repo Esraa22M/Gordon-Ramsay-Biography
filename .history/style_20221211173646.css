@@ -97,7 +97,7 @@ header#header {
   justify-content: center;
   align-items: center;
 }
-.header__primary-nav-links .header__primary-nav-links--link-item {
+.header__primary-nav-links li {
   padding-right: 3vw;
 }
 .header__primary-nav--nav-link {
@@ -173,7 +173,7 @@ header#header {
     left: 2rem;
   }
 
-  .header__primary-nav-links :where(.header__primary-nav-links--link-item) {
+  .header__primary-nav-links li {
     margin-bottom: 4vh;
     margin-left: 6vw;
     opacity: 0;
@@ -208,8 +208,5 @@ header#header {
   }
   .main__nav--position .line-3 {
     transform: rotateZ(45deg) translate(-1.5rem);
-  }
-  .fade{
-    opacity: 1;
   }
 }

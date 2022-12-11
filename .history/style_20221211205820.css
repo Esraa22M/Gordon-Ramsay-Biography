@@ -173,7 +173,7 @@ header#header {
     left: 2rem;
   }
 
-  .header__primary-nav-links :where(.header__primary-nav-links--link-item) {
+  .header__primary-nav-links .header__primary-nav-links--link-item {
     margin-bottom: 4vh;
     margin-left: 6vw;
     opacity: 0;
