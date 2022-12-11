@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* utility components */
+:root {
+  font-size: 62.5%;
+  /* colors */
+  --clr-neutral-100: #36454f;
+  --clr-neutral-200: #282c35;
+  --clr-light: #ffff;
+  --clr-primary: #fae000;
+  --ff-primary: "Baloo Tamma 2", cursive;
+}
+body {
+  font-family: var(--ff-primary);
+  line-height: 1.8;
+  display: flex;
+}
+/* -------------------Main Styling-------*/
+
+/* ---side nav-- */
+aside#aside-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.aside--nav__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--clr-neutral-200);
+  align-items: center;
+}
+.aside--nav__content__logo {
+  width: calc(3vw + 3vh);
+    height: calc(3vw + 3vh);
+
+  object-fit: cover;
+}
+.aside-nav__content__nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(0.3em + 0.4vw );
+  justify-content: flex-end;
+}
+.aside--nav__content__nav--social {
+  list-style: none;
+}
+
+.aside--nav__content__nav--social a i {
+  font-size: calc(1rem + 0.666vw);
+  color: var(--clr-light);
+  margin: calc(2rem + 0.666vw )  calc(1rem + 0.666vw );
+  transition: color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.aside--nav__content__nav--social a i:hover,
+.aside--nav__content__nav--social a i:focus-within ,
+.aside--nav__content__nav--social a i:active 
+{
+  color: var(--clr-primary);
+}
+/* Main content */
+main{
+  flex: 1;
+}
+/* ---Primary Nav ---*/
+header#header{
+  background-color: var(--clr-neutral-200);
+}
+#header__primary-nav{
+  height: calc(3vw + 3vh);;
+}

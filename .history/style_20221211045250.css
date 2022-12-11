@@ -159,24 +159,9 @@ header#header {
     flex-direction: column;
     align-items: flex-start;
   }
-  .header__primary-nav-links::after {
-    content: "";
-    position: absolute;
-    height: 50%;
-    width: 50%;
-    opacity: 0.8;
-    z-index: -1;
-    border-radius: 10px 5% / 20px 25em 30px 35em;
-
-    background-color: var(--clr-neutral-100);
-    box-shadow: 0 0 0.3rem 0.1rem var(--clr-primary);
-    left: 2rem;
-  }
-
   .header__primary-nav-links li {
     margin-bottom: 4vh;
     margin-left: 6vw;
-    opacity: 0;
   }
 
   .header__primary-nav--hamburger {
@@ -201,12 +186,6 @@ header#header {
     transition: all 0.4s ease-in-out;
   }
   .main__nav--position .line-1 {
-    transform: rotateZ(-405deg) translate(-1.25rem);
-  }
-  .main__nav--position .line-2 {
-    opacity: 0;
-  }
-  .main__nav--position .line-3 {
-    transform: rotateZ(45deg) translate(-1.5rem);
+    transform: rotateZ(-45deg);
   }
 }

@@ -176,7 +176,6 @@ header#header {
   .header__primary-nav-links li {
     margin-bottom: 4vh;
     margin-left: 6vw;
-    opacity: 0;
   }
 
   .header__primary-nav--hamburger {
