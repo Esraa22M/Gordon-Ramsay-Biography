@@ -1,0 +1,264 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* utility components */
+:root {
+  font-size: 62.5%;
+  /* colors */
+  --clr-neutral-200: rgb(47, 45, 45);
+  --clr-neutral-100: #212529;
+  --clr-light: #ffff;
+  --clr-primary: rgb(159, 129, 66);
+  --ff-primary: "Raleway", sans-serif;
+
+  --ff-secondary: "Dancing Script", cursive;
+}
+body {
+  font-family: var(--ff-primary);
+  line-height: 1.8;
+  display: flex;
+  width: 100vw;
+}
+ul {
+  list-style: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--clr-light);
+}
+/* -------------------Main Styling-------*/
+
+/* ---side nav-- */
+#aside-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.aside--nav__content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: lightgray;
+  align-items: center;
+}
+.aside--nav__content__logo {
+  width: calc(3vw + 3vh);
+  height: calc(3vw + 3vh);
+  object-fit: cover;
+}
+.aside-nav__content__nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(0.3em + 0.4vw);
+  justify-content: flex-end;
+}
+.aside--nav__content__nav--social {
+  list-style: none;
+}
+
+.aside--nav__content__nav--social a i {
+  font-size: calc(1rem + 0.666vw);
+  color: var(--clr-light);
+  margin: calc(2rem + 0.666vw) calc(1rem + 0.666vw);
+  transition: color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.aside--nav__content__nav--social a i:hover,
+.aside--nav__content__nav--social a i:focus-within,
+.aside--nav__content__nav--social a i:active {
+  color: var(--clr-primary);
+}
+/* Main content */
+main {
+  flex: 1;
+}
+/* ---Primary Nav ---*/
+header#header {
+  background-color: var(--clr-neutral-100);
+  width: 100%;
+}
+:where(#header__primary-nav) {
+  height: calc(3vw + 3vh);
+  width: 100%;
+}
+.header__primary-nav-links {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.header__primary-nav-links .header__primary-nav-links--link-item {
+  padding-right: 3vw;
+}
+.header__primary-nav--nav-link {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  position: relative;
+  padding: 0.2rem 0.6rem;
+}
+.header__primary-nav--nav-link:link::before,
+.header__primary-nav--nav-link:visited::before,
+.header__primary-nav--nav-link:link::after,
+.header__primary-nav--nav-link:visited::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--clr-primary);
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+}
+.header__primary-nav--nav-link:link::before,
+.header__primary-nav--nav-link:visited::before {
+  top: 0;
+  transform-origin: right;
+}
+.header__primary-nav--nav-link:link::after,
+.header__primary-nav--nav-link:visited::after {
+  bottom: 0;
+  transform-origin: left;
+}
+.header__primary-nav--nav-link:hover::before,
+.header__primary-nav--nav-link:active::before,
+.header__primary-nav--nav-link:hover::after,
+.header__primary-nav--nav-link:active::after {
+  transform: scaleX(1);
+}
+/*-------------showcase section---------------*/
+section#show-case {
+  background-image: url("./img/GRA_Gordon_010921.webp");
+  background-size: cover;
+  object-fit: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  color: var(--clr-light);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.show-case__content {
+  background-color: var(--clr-primary);
+  padding: calc(2rem+5vw);
+  min-height: calc(5rem + 20vmax);
+  width: calc(5rem + 32vmax);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.show-case__content-title ,.show-case__word 
+ {
+  font-size: calc(2.5rem + 3vw);
+  font-family: var(--ff-secondary);
+}
+.show-case__content--bio {
+  font-size: calc(1rem + 0.5vw);
+}
+.show-case__content--link:visited,
+.show-case__content--link:link {
+  padding: 1rem 0;
+  transition: all 0.5s ease-in-out;
+  width: 10rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  background-color: var(--clr-neutral-200);
+}
+@media screen and (max-width: 950px) {
+  /*showcase section**/
+  section#show-case {
+    background-image: url(./img/GRA_Gordon.png);
+  }
+}
+/* max width (610px) */
+@media screen and (max-width: 610px) {
+  .primary-nav-container {
+    position: relative;
+  }
+  :where(#header__primary-nav) {
+    width: 30rem;
+    height: 100%;
+    position: fixed;
+    background-color: var(--clr-neutral-200);
+    top: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    text-align: center;
+  }
+  .main__nav--position {
+    opacity: 1;
+  }
+  .header__primary-nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* .header__primary-nav-links::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 10px 5% / 20px 25em 30px 35em;
+
+    background-color: var(--clr-neutral-100);
+    box-shadow: 0 0 0.3rem 0.1rem var(--clr-primary);
+    left: 2rem;
+  } */
+
+  .header__primary-nav-links :where(.header__primary-nav-links--link-item) {
+    margin-bottom: 4vh;
+    margin-left: 6vw;
+    opacity: 0;
+  }
+
+  .header__primary-nav--hamburger {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    z-index: 200;
+    top: 2rem;
+    right: 3rem;
+    background-color: var(--clr-neutral-200);
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .line {
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--clr-light);
+    border-radius: 0.2rem;
+    transition: all 0.4s ease-in-out;
+  }
+  .primary-nav-container[aria-expanded="true"] .line-1 {
+    transform: rotateZ(-405deg) translate(-1.25rem);
+  }
+  .primary-nav-container[aria-expanded="true"] .line-2 {
+    opacity: 0;
+  }
+  .primary-nav-container[aria-expanded="true"] .line-3 {
+    transform: rotateZ(45deg) translate(-1.5rem);
+  }
+  .fade {
+    opacity: 1;
+  }
+}
