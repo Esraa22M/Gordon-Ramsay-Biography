@@ -50,7 +50,7 @@ a:visited {
   align-items: center;
 }
 .aside--nav__content__logo {
-  margin-top: 1rem;
+  width: calc(3vw + 3vh);
   height: calc(3vw + 3vh);
   object-fit: cover;
 }
@@ -141,7 +141,7 @@ section#show-case {
   background-size: cover;
   object-fit: cover;
   background-attachment: fixed;
-  background-position: 20%;
+  background-position: center;
   height: 100vh;
   color: var(--clr-light);
   display: flex;
@@ -152,48 +152,47 @@ section#show-case {
   background-color: var(--clr-primary);
   opacity: 0.9;
   padding: calc(1rem + 1vw);
-  min-height: calc(4rem + 20vmax);
-  width: calc(4rem + 30vmax);
+  min-height: calc(5rem + 20vmax);
+  width: calc(5rem + 32vmax);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   animation: hero 2s ease-in-out;
 }
-@keyframes hero {
-  0% {
-    transform: translateX(-60rem) rotate(369deg);
+@keyframes hero{
+  0%{
+    transform:  translateX(-60rem) rotate(369deg);
     opacity: 0;
   }
-  100% {
+  100%{
     transform: translateX(0);
     opacity: 1;
   }
 }
 .show-case__word {
   width: 30rem;
-  font-size: calc(1rem + 4vw);
+  font-size: calc(1rem + 5vw);
 }
 .show-case__content-title {
-  font-size: calc(1rem + 3vw);
+  font-size: calc(1rem + 2.5vw);
 }
 .show-case__content-title,
 .show-case__word {
   font-family: var(--ff-secondary);
 }
 .show-case__content--bio {
-  font-size: calc(1rem + 0.75vw);
-  text-align: justify;
+  font-size: calc(1rem + 0.5vw);
 }
 .show-case__content--link:visited,
 .show-case__content--link:link {
   padding: 1rem 0;
   transition: all 0.5s ease-in-out;
-  width: 14rem;
+  width: 13rem;
   text-align: center;
-  margin-top: 1rem;
+    margin-top: 1rem;
 
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   position: relative;
   border: 1px solid var(--clr-neutral-200);
   border-bottom-right-radius: 1rem 1rem;
@@ -212,118 +211,47 @@ section#show-case {
   transform-origin: right;
   transition: transform 0.4s;
 }
-.show-case__content--link:visited:hover,
-.show-case__content--link:link:hover {
+.show-case__content--link:visited:hover,.show-case__content--link:link:hover
+{
   border-radius: unset;
   border: unset;
 }
 .show-case__content--link:hover::after,
 .show-case__content--link:active::after {
   transform: scaleX(1);
-  transform-origin: left;
+    transform-origin: left;
+
 }
 
 /* work section */
-section#work {
+section#work{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
 }
-div.work__card {
+div.work__card{
   padding: 2rem;
-  flex-grow: 1;
-  flex-basis: 60rem;
+  flex-basis: 80rem;
 }
-div.work__card img {
-  width: 100%;
+div.work__card img{
+  width:100%;
   height: 100%;
-  object-fit: cover;
 }
-/* ---About Chef---- */
-section#about-chef {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 2rem;
-  color: var(--clr-light);
-  background-color: var(--clr-neutral-200);
-}
-.about-chef__img,
-.about-chef__content {
-  flex-basis: 60rem;
-  flex-grow: 1;
-  padding: 1rem;
-}
-.about-chef__img img {
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.about-chef__content--header {
-  text-transform: uppercase;
-  position: relative;
-  width: fit-content;
-  letter-spacing: 0.1rem;
-  margin: 2rem 0;
-  padding: 0.25em 0;
-  flex-grow: 0;
-  font-size: var(2rem + 4vw);
-}
-.about-chef__content--header::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  height: 0.25rem;
-  background-color: var(--clr-primary);
-}
-.about-chef__content--description {
-  font-size: calc(1rem + 0.5vw);
-  margin-bottom: 2rem;
-  text-align: justify;
-}
-.about-chef__content--link:link,
-.about-chef__content--link:visited {
-  background-color: var(--clr-primary);
-  line-height: 1.9;
-  margin-top: 1em;
-  padding: 1.75em 3em;
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  border-radius: 0.3em;
-  transform: all 0.5s;
-
-  transition-timing-function: linear;
-}
-.about-chef__content--link:link:hover,
-.about-chef__content--link:visited:hover {
-  background-color: var(--clr-neutral-200);
-  border: 1px solid var(--clr-primary);
-}
-@media screen and (max-width: 950px) {
-  /*showcase section**/
-  section#show-case {
+@media screen and (max-width: 950px) { /*showcase section**/
+    section#show-case {
     background-image: url(./img/GRA_Gordon.png);
     justify-content: space-evenly;
     align-items: flex-end;
     flex-direction: column;
     background-position: 10%;
   }
-  .show-case__content,
-  .show-case__word {
-    width: 50%;
-    margin-right: 1rem;
+  .show-case__content,.show-case__word{
+    width: 40%;
   }
 }
 /* max width (610px) */
 @media screen and (max-width: 610px) {
-  .aside--nav__content__nav--social a i {
-    font-size: calc(1rem + 2vw);
-  }
   .primary-nav-container {
     position: relative;
   }
@@ -400,12 +328,11 @@ section#about-chef {
   .fade {
     opacity: 1;
   }
-  section#show-case {
+    section#show-case {
     background-position: 10%;
     align-items: center;
-  }
-  .show-case__content,
-  .show-case__word {
-    width: 80%;
-  }
+  } 
+  .show-case__content,.show-case__word{
+    width: 90%;
+  }   
 }
