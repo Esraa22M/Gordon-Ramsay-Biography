@@ -377,7 +377,7 @@ section#about-chef {
     left: 2rem;
   } */
 .primary-nav-container{
-  padding: 1.5rem 1rem;
+  justify-content: center;
 }
   .header__primary-nav-links :where(.header__primary-nav-links--link-item) {
     margin-bottom: 4vh;

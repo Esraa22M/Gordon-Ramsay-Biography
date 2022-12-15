@@ -81,11 +81,6 @@ header#header {
   z-index: 1000;
   right: 0;
 }
-.primary-nav-container{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .navbar__scroll--style{
   background-color: var(--clr-light);
 }
@@ -339,7 +334,6 @@ section#about-chef {
   
   .primary-nav-container {
     position: relative;
-
   }
   :where(#header__primary-nav) {
     width: 30rem;
@@ -376,9 +370,7 @@ section#about-chef {
     box-shadow: 0 0 0.3rem 0.1rem var(--clr-primary);
     left: 2rem;
   } */
-.primary-nav-container{
-  padding: 1.5rem 1rem;
-}
+
   .header__primary-nav-links :where(.header__primary-nav-links--link-item) {
     margin-bottom: 4vh;
     margin-left: 6vw;

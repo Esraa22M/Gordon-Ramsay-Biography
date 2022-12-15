@@ -30,7 +30,7 @@ readMoreButton.addEventListener("click", function (e) {
 /////Sticky Navbar scrolling behaviour///
 const showCase = document.querySelector("#show-case");
 const headerPrimaryNav = document.querySelector("#header__primary-nav");
-const headerPrimaryNavLink = document.querySelectorAll(
+const headerPrimaryNavLink = document.querySelector(
   ".header__primary-nav--nav-link"
 );
 const stuckyObserverCallBack = function (enteries, observer) {
@@ -38,20 +38,15 @@ const stuckyObserverCallBack = function (enteries, observer) {
   //.navbar__scroll--style
   if (!entry.isIntersecting) {
     headerPrimaryNav.classList.add("navbar__scroll--style");
-    headerPrimaryNavLink.forEach((link) =>
-      link.classList.add("navbar__scroll--style-link")
-    );
+    headerPrimaryNavLink.classList.add("navbar__scroll--style-link");
   } else {
     headerPrimaryNav.classList.remove("navbar__scroll--style");
-    headerPrimaryNavLink.forEach((link) =>
-      link.classList.remove("navbar__scroll--style-link")
-    );
+    headerPrimaryNavLink.classList.remove("navbar__scroll--style-link");
   }
 };
 const observerOptions = {
   root: null,
   threshold: 0.1,
-  
 };
 const observer = new IntersectionObserver(
   stuckyObserverCallBack,

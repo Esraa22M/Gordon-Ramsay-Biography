@@ -26,8 +26,8 @@ body {
 ul {
   list-style: none;
 }
-:where(a:link),
-:where(a:visited) {
+a:link,
+a:visited {
   text-decoration: none;
   cursor: pointer;
   color: var(--clr-light);
@@ -81,17 +81,9 @@ header#header {
   z-index: 1000;
   right: 0;
 }
-.primary-nav-container{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .navbar__scroll--style{
   background-color: var(--clr-light);
-}
-.navbar__scroll--style-link{
-    color: var(--clr-neutral-100);
-
+  color: var(--clr-neutral-100);
 }
 :where(#header__primary-nav) {
  
@@ -113,6 +105,7 @@ header#header {
   font-size: 1.8rem;
   text-transform: capitalize;
   position: relative;
+
   padding: 0.2rem 0.6rem;
 }
 .header__primary-nav--nav-link:link::before,
@@ -339,7 +332,6 @@ section#about-chef {
   
   .primary-nav-container {
     position: relative;
-
   }
   :where(#header__primary-nav) {
     width: 30rem;
@@ -376,9 +368,7 @@ section#about-chef {
     box-shadow: 0 0 0.3rem 0.1rem var(--clr-primary);
     left: 2rem;
   } */
-.primary-nav-container{
-  padding: 1.5rem 1rem;
-}
+
   .header__primary-nav-links :where(.header__primary-nav-links--link-item) {
     margin-bottom: 4vh;
     margin-left: 6vw;

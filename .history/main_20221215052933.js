@@ -38,20 +38,18 @@ const stuckyObserverCallBack = function (enteries, observer) {
   //.navbar__scroll--style
   if (!entry.isIntersecting) {
     headerPrimaryNav.classList.add("navbar__scroll--style");
-    headerPrimaryNavLink.forEach((link) =>
-      link.classList.add("navbar__scroll--style-link")
-    );
+    headerPrimaryNavLink.forEach(link=> link.classList.add("navbar__scroll--style-link"))
   } else {
     headerPrimaryNav.classList.remove("navbar__scroll--style");
-    headerPrimaryNavLink.forEach((link) =>
-      link.classList.remove("navbar__scroll--style-link")
-    );
+        headerPrimaryNavLink.forEach((link) =>
+          link.classList.remove("navbar__scroll--style-link")
+        );
+
   }
 };
 const observerOptions = {
   root: null,
   threshold: 0.1,
-  
 };
 const observer = new IntersectionObserver(
   stuckyObserverCallBack,
